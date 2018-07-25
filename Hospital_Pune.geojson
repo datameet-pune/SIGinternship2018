@@ -1,0 +1,200 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2018-04-22T10:58:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/672120487",
+        "amenity": "hospital",
+        "name": "Sardar Patel Cantonment General Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.87712,
+          18.5027163
+        ]
+      },
+      "id": "node/672120487"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/674697804",
+        "amenity": "hospital",
+        "name": "Cantonment General Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8486994,
+          18.569025
+        ]
+      },
+      "id": "node/674697804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/678341812",
+        "addr:city": "Pune",
+        "addr:country": "IN",
+        "addr:state": "Maharashtra",
+        "addr:street": "Right Flank Road",
+        "amenity": "hospital",
+        "internet_access": "wired",
+        "name": "Command Hospital Southern Command"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8894328,
+          18.5005828
+        ]
+      },
+      "id": "node/678341812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/763549120",
+        "amenity": "hospital",
+        "name": "Ghaisas ENT Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8431927,
+          18.5163564
+        ]
+      },
+      "id": "node/763549120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/772571829",
+        "amenity": "hospital",
+        "name": "Sassoon Hospital",
+        "wikidata": "Q7425789"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8696302,
+          18.525302
+        ]
+      },
+      "id": "node/772571829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1054641704",
+        "amenity": "hospital",
+        "name": "Karva Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8461063,
+          18.5009733
+        ]
+      },
+      "id": "node/1054641704"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1534406257",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "name": "Vetinary Hospital",
+        "source": "local"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8345121,
+          18.5176759
+        ]
+      },
+      "id": "node/1534406257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1743974394",
+        "amenity": "hospital",
+        "name": "Shewale Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8325117,
+          18.5626563
+        ]
+      },
+      "id": "node/1743974394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2289294093",
+        "addr:city": "Pune",
+        "addr:housenumber": "1317",
+        "addr:postcode": "411011",
+        "amenity": "hospital",
+        "name": "Surya Hospital",
+        "name:mr": "सुर्या रुग्णालय",
+        "phone": "02024574232",
+        "website": "http://www.sahyadrihospital.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8555908,
+          18.5214257
+        ]
+      },
+      "id": "node/2289294093"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2921897064",
+        "amenity": "hospital",
+        "emergency": "no",
+        "name": "Gupte Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8398724,
+          18.519051
+        ]
+      },
+      "id": "node/2921897064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3238255107",
+        "amenity": "hospital",
+        "name": "Naik Hospital",
+        "name:mr": "नाईक रुग्णालय"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8594694,
+          18.5102879
+        ]
+      },
+      "id": "node/3238255107"
+    }
+  ]
+}

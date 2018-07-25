@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>About</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+		<meta charset='utf-8' />
+
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		
+		<style>
+			.navbar-custom
+			{
+    				background-color: grey;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+			<div class="container-fluid">
+				
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><font color=white>Datameet : Pune Chapter</font></a>
+				</div>
+				<div>
+					<a href="about.html"><font color=white>About the Project</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="studyarea.html"><font color=white>Study Area</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="data.html"><font color=white>Data</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="analysis.html"><font color=white>Methodology</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="outcomes.html"><font color=white>Project Outcomes</font></a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+		<br><u><b>INTRODUCTION</b></u>
+		<p>The World Health Organization (WHO) has stated that Road Traffic injuries have now taken 9th place as a major cause for death rates, globally, and well on its way to moving down to the 7th place by 2030 if serious action is not against current trends. The UN has correspondingly declared 2011-2020 as a decade of action for Road Safety. As we come to the last leg of this initiative, we thought we would look at how well the city of Pune, more specifically the Pune Municipal Corporation (PMC) region is doing.<br>
+Apart from being the only city in Maharashtra to hinder the overall improvement in Road safety, the rates of Road accidents in Pune have skyrocketed to a shocking 9.59% in the year 2017! 
+Some of the major reasons for this are as follows:</p>
+		<ol type="1">
+			<li>The increase in number of vehicles on the poorly maintained roads of Pune.</li>
+			<li>Pune has been developing at an unprecedented rate, thus resulting in heavy vehicles on the roads.</li>
+			<li>Five major highways pass through the city, connecting Mumbai, Satara, Solapur, Ahmednagar and Nashik.</li>
+		</ol>
+		<p>While there has been a decrease in the number of fatalities, there has been a much more striking increase in injuries suffered at these accident sites.<br>
+As an initiative to both bring this to the attention of the public and to put forth a plausible solution, this project uses Geographic Information Systems (GIS) to analyse the aforementioned statistical data, making it available to the general public through a webpage.
+By locating the HealthCare Facilities in the PMC region, we get an idea of how well spaced health care facilities are distributed. Factoring in population density, complexity of roads and the presence of Accident Hotspots in the area, the areas in dire need of Emergency Healthcare facilities can be illustrated, thereby inching one step closer to achieving ultimate goal set forth by the United Nations.</p><hr>
+		<u><b>LITERATURE REVIEW</b></u>
+		<p>Literature review is a collective synopsis of the reports and papers of research studied for developing an optimum route for this project.<br>
+While the use of GIS to solve everyday crises situations have been booming in the recent years, the following studies have proven how both the worlds of GIS, Healthcare Management and Road Safety can collaborate and thereby assist in making the world a safer place to live in.</p>
+		<ol type="1">
+			<li>Hospital Allocation-Location in Shiraz using Geographical Information Systems (GIS)</li>
+			<li>Proximity to hospital and mortality from Motor Vehicle Traffic Accidents</li>
+			<li>Accident and Traffic Analysis using GIS</li>
+		</ol>
+		<p>Students from the Shiraz University of Medical Science, Shiraz, Iran studied the location of existing hospitals in the Shiraz region, using GIS. For this, 9 criteria were taken into consideration- Population Density, Distribution of Hospitals across the city, Accessibility to these facilities, Proximity of main roads, Distance of Hospitals from the Airport, Distance from a river path, Distance from Industrial centres, Proximity to fire stations and Land area available. The result depicted how good management of resources could progress their current situation. However, as is the case in most developing countries, hospital site location cannot be based solely on scientific criteria. Much like India, Shiraz too, has an ever-increasing population, and an urgency for reliable, quantitative and qualitative data. A map of the locations lacking in healthcare facilities in a 1500m radius could however be marked, thereby highlighting the areas that are severely lacking in Emergency Healthcare facilities, a criterion used in our study, also.<br>
+
+A study in Wales brought to light the fact that rural areas were usually a lot further away Healthcare facilities, thereby further cutting a wedge between the more privileged sectors of society with the former. This brings to light the importance of policy makers paying attention to the necessity of a much fairer and evenly distributed Healthcare flow.<br>
+
+Closer to home, the city of Coimbatore underwent an analysis on road accidents on three major highways, aiming at creating a model to help identify black spots on roads using both Spatial and Non Spatial information, using GIS. This is mainly because the existing methods are heavily dependent on traffic flow data and on-site data collection by the Police Department, in the event of an accident occurring. Using Weighted Overlay technique, it was possible to rank accident locations.<br>
+
+Focusing on the other part of this project- Web mapping, we will showcase the use of Leaflet JavaScript library.
+Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps. It has all the mapping features most developers ever need.<br>
+
+Leaflet is designed with simplicity, performance and usability in mind. It works efficiently across all major desktop and mobile platforms, can be extended with lots of plugins, has a beautiful, easy to use and well-documented API and a simple, readable source code that is a joy to contribute to.<br>
+
+The design of the web page is build using bootstrap which is an open source toolkit for developing with HTML, CSS and JS.
+So leaflet helps developers add base maps and map layers onto their webpages and bootstrap helps in the design i.e. is the look of the webpage.</p>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

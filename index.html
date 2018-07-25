@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<title>Pune Chapter</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+		<meta charset='utf-8' />
+		<link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+		
+		<script src="hospitals.js"></script>
+		<script src="Hospital_Buffer.js"></script>
+		<script src="Pune_Ward.js"></script>
+		<script src="Highlight.js"></script>
+		<script src="studyArea.js"></script>
+		<script src="AccidentHotspot.js"></script>
+		<script src="Badhvan_Kothrud_Depot.js"></script>
+		
+		<script src="lib/leaflet/leaflet.js"></script>
+		<style>
+			#map
+			{
+    				height: 90%;
+			}
+			.navbar-custom
+			{
+    				background-color: grey;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+			<div class="container-fluid">
+				
+				<div class="navbar-header">
+					<a href="MainPage.html" target="_base" class="navbar-brand"><font color=white>Accessibility of Healthcare Facilities in PMC Region</font></a>
+				</div>
+				<div>
+					<a href="about.html"><font color=white>About the Project</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="studyarea.html"><font color=white>Study Area</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="data.html"><font color=white>Data</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="analysis.html"><font color=white>Methodology</font></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="outcomes.html"><font color=white>Project Outcomes</font></a>
+				</div>
+			</div>
+		</nav>
+		
+			<div id="map"></div>
+							<script>
+  								var map = L.map('map', {center: [18.533336, 73.833686],zoom: 12});
+
+								var basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'}).addTo(map);
+
+								var hospicon = new L.Icon(
+									{
+										iconUrl: "hosp.png",
+										iconSize: [25,25]
+									}
+								);
+								
+								var acciicon = new L.Icon(
+									{
+										iconUrl: "dash.png",
+										iconSize: [35,35]
+									}
+								);
+						
+								var caseicon = new L.Icon(
+									{
+										iconUrl: "accired.png",
+										iconSize: [25,35]
+									}
+								);
+
+								var baselayer = {
+									"Map": basemap
+								};
+
+								var hospital = new L.LayerGroup();
+								var pmc = new L.LayerGroup();
+								var studyA = new L.LayerGroup();
+								var buffer = new L.LayerGroup();
+								var highL = new L.LayerGroup();
+								var accHotspot = new L.LayerGroup();
+								var bavdhan = new L.LayerGroup();
+								var suite_sites = new L.LayerGroup();
+								var overlays = {
+									"PMC": pmc,
+									"Hospitals": hospital,
+									"Buffers": buffer,
+									"Highlighted Areas": highL,
+									"Uncovered Spots": studyA,
+									"Bavdhan-Kothrud": bavdhan,
+									"Hotspots": accHotspot
+								};
+
+								L.control.layers(baselayer, overlays, {collapsed: false}).addTo(map);
+
+								L.geoJson(pune, {color: 'green'}).addTo(pmc);
+								L.geoJson(hosp, {
+									pointToLayer: function(feature, latlng)
+									{
+        									return L.marker(latlng, {icon: hospicon});
+									},
+									onEachFeature: function(feature, layer)
+									{
+										layer.bindPopup(feature.properties.Name, {closeButton: false});
+									}
+								}).addTo(hospital);
+								L.geoJson(highlight, {color: 'red'}).addTo(highL);
+								L.geoJson(buff).addTo(buffer);
+								L.geoJson(area, {
+									pointToLayer: function(feature, latlng)
+									{
+        									return L.marker(latlng, {icon: acciicon});
+									},
+									onEachFeature: function(feature, layer)
+									{
+										layer.bindPopup(feature.properties.Name, {closeButton: false});
+									}
+								}).addTo(studyA); 
+								L.geoJson(bavdhankothrud, {color: 'purple'}).addTo(bavdhan);
+								L.geoJson(acc_spot,
+								{
+									onEachFeature: function(feature, layer)
+									{
+										layer.bindPopup(feature.properties.Name, {closeButton: false});
+									},
+									pointToLayer: function(feature, latlng)
+									{
+        									return L.marker(latlng, {icon: caseicon});
+									}
+								}).addTo(accHotspot);
+							</script>
+			
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
